@@ -1,0 +1,49 @@
+<Connected>:
+    GridLayout:
+        cols: 1
+        FloatLayout:
+            RelativeLayout:
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("1c486b") #blue
+                    Rectangle:
+                        size: self.size
+                rows: 1
+                pos_hint: {"top": 1, "left": 1}
+                size_hint: 1, .1
+                Label:
+                    text_size: self.size
+                    multiline: 'False'
+                    text: "SCREEN BANNER"
+                    font_size: '18'
+                    padding_x: '5'
+                    halign: 'center'
+                    valign: 'middle'
+
+            ScreenManager:
+                pos_hint: {"top": .9, "left": 1}
+                size_hint: 1, .9
+                id: connected_screen_manager
+                Screen1:
+                    name: "screen_1"
+                    id: screen_1
+                Screen2:
+                    name: "screen_2"
+                    id: screen_2
+
+
+            GridLayout:
+
+                rows: 1
+                pos_hint: {"top": .1, "right": 1}
+                size_hint: 1, .1
+                padding: 8
+
+                Button:
+                    text: "Screen_1"
+                    on_release:
+                        app.connected_change_screen("screen_1")
+                Button:
+                    text: "Screen_2"
+                    on_release:
+                        app.connected_change_screen("screen_2")

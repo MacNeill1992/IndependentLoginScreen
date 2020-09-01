@@ -1,0 +1,18 @@
+#:import utils kivy.utils
+#:import StringProperty kivy.properties
+#:include screen1.kv
+#:include screen2.kv
+#:include loginscreen.kv
+#:include connected.kv
+
+FloatLayout:
+    ScreenManager:
+        pos_hint: {"top": 1, "left": 1}
+        size_hint: 1, 1
+        id: screen_manager
+        LoginScreen:
+            name: "login_screen"
+            id: login_screen
+        Connected:
+            name: "connected"
+            id: connected
