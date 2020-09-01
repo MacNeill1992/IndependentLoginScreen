@@ -8,6 +8,7 @@ import traceback
 import requests
 Config.set('graphics', 'width', '500')
 Config.set('graphics', 'height', '850')
+#GITHUB SUCCESS
 
 class LoginScreen(Screen):
     pass
