@@ -6,8 +6,8 @@ from myfirebase import MyFirebase
 import json
 import traceback
 import requests
-Config.set('graphics', 'width', '500')
-Config.set('graphics', 'height', '850')
+# Config.set('graphics', 'width', '500')
+# Config.set('graphics', 'height', '850')
 #GITHUB SUCCESS
 
 class LoginScreen(Screen):
